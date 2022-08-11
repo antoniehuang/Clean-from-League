@@ -26,7 +26,7 @@ async function fetchRiotAPI() {
         const data3 = await res3.json()
         endTime = data3['info']['gameEndTimestamp']
         console.log(endTime)
-        timeText.innerHTML += convertUnix(endTime)
+        timeText.innerHTML = convertUnix(endTime)
         timeBetweenText.innerHTML = timeBetween(endTime)
 
     } catch (err) {
